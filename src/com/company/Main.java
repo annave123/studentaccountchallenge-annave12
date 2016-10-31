@@ -1,24 +1,54 @@
 package com.company;
 
-
 import java.util.Scanner;
-import java.util.StringJoiner;
 
 public class Main {
 
     public static void main(String[] args) {
 
         System.out.println("Welcome to the PV student account generator");
-        //Scanner system that accepts user input
+
+        Scanner newName = new Scanner(System.in);
+        FIRSTRANDOM infos = new FIRSTRANDOM();
+        String FinalRealPass = infos.getPass();
+
+
+        studentRandomID info = new studentRandomID();
+        String studentID = info.randID();
+        String finalStudentId = studentID.substring(0,3);
+
+
             Scanner keyboardInput = new Scanner(System.in);
             System.out.println("Enter student first name");
-            String fName = keyboardInput.next();
-            System.out.println("Enter student last name");
-            String lName = keyboardInput.next();
-        //end scanner system
+            String fName = keyboardInput.next().toLowerCase();
+            String thanks = fName.substring(0,3);
+            StringBuffer hello = new StringBuffer(thanks);
+            StringBuffer h =hello.reverse();
 
-        //call method that generates random number
-            String studentID = studentRandomID.randID();
+
+
+
+        System.out.println("Enter student last name");
+        String lName = keyboardInput.next().toLowerCase();
+        String please = lName.substring(0,3);
+        StringBuffer bye = new StringBuffer(please);
+        StringBuffer j =bye.reverse();
+
+
+
+            String finnishing = h.substring(2);
+            String up = j.substring(2);
+
+            String Final = finnishing+up+finalStudentId;
+
+
+
+
+        System.out.println("Your Username: "+Final);
+        System.out.println("\nYour Password is: "+ FinalRealPass);
+
+
+
         //end call for random number
 
         //Your goal is to create a system that uses the user input to generate an ID just like PV does.
