@@ -62,7 +62,7 @@ public class Main {
         //Finally, and if you truly are the Zuck, prompt the user to see if the user to create is a staff
         //If that is the case, use firstName initial and the full lastName
 
-        //Program begins here...
+        //Program begins here..
     }
 
 
